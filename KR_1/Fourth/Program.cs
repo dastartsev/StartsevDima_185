@@ -20,7 +20,7 @@ class Program
         double temp;
         S1 = 1;
         S2 = 0;
-        double[] r = new double[N];
+        double[] r = new double[N + 1];
         r[0] = 1;
 
         for (int i = 1; i < r.Length; ++i)
@@ -28,10 +28,22 @@ class Program
             temp = 0;
             for (int k = 1; k < r.Length; ++k)
             {
-
+                temp =(double) Factorial(N) / (Factorial(k + 1) * Factorial(N - k)) * r[N-k];
             }
-
+            r[i] = (double)-1 / (N + 1) * temp;
+            if (i % 2 == 0)
+            {
+                S1 += r[i];
+            } else
+            {
+                S2 += r[i];
+            }
         }
+    }
+
+    static double Factorial(int temp)
+    {
+        return (temp > 1) ? temp - 1 : 1;
     }
 
     static void Print(int a, double b, double c)
@@ -43,6 +55,7 @@ class Program
     {
         do
         {
+            Console.Write("Введите N: ");
             int N = Input();
             double S1, S2;
             for (int i = 1; i < N; ++i)
