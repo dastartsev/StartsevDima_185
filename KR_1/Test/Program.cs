@@ -18,8 +18,7 @@ class Program
     {
         do
         {
-            Console.WriteLine("fsada");
-            Console.WriteLine(double.Epsilon);
+      
 
 
         } while (Console.ReadKey(true).Key != ConsoleKey.Enter);

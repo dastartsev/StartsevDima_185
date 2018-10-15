@@ -6,7 +6,7 @@ class Program
     {
         int a;
 
-        while (!int.TryParse(Console.ReadLine(), out a))
+        while (!int.TryParse(Console.ReadLine(), out a) && a < 1)
         {
             Console.WriteLine("Неверный ввод, повторите попытку: ");
         }
@@ -25,10 +25,11 @@ class Program
         return a;
     }
 
-    static bool Summ(double x, int K)
+    static bool Summ(double x, int K, out double ans)
     {
-        double eps = double.Epsilon, ans = 0;
+        double eps = double.Epsilon;
         int n = 0;
+        ans = 0;
 
         if (Math.Abs(x) < 7)
         {
@@ -60,8 +61,17 @@ class Program
     {
         do
         {
-            double a = Input_double(), b = Input_double();
-            Print(a, b);
+            int K = Input_int();
+            double x0 = Input_double();
+
+            if (Summ(x0, K, out double ans))
+            {
+                Print(x0, ans);
+            } else
+            {
+                Console.WriteLine($"K = {K}");
+                Print(x0, ans);
+            }
 
         } while (Console.ReadKey(true).Key != ConsoleKey.Enter);
     }
