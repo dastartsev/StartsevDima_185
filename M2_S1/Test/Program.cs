@@ -39,3 +39,6 @@ class Program
         } while (Console.ReadKey(true).Key != ConsoleKey.Enter);
     }
 }
+
+int a = beer.man;
+beer.man = 12;
