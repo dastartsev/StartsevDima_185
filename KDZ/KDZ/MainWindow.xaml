@@ -1,0 +1,29 @@
+﻿<Window x:Class="KDZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KDZ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="382*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="338*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"></RowDefinition>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,1,0">
+            <ToolBarTray  DockPanel.Dock="Top" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+                <ToolBar  >
+                    
+                </ToolBar>
+            </ToolBarTray>
+        </DockPanel>
+        <DataGrid  Grid.Row="1" x:Name="dataGridView1"  Grid.ColumnSpan="3" Margin="0,0,1,-0.5"/>
+    </Grid>
+</Window>
