@@ -1,15 +1,13 @@
 public static int Input()
     {
-        int a;
+        int temp;
 
-        while (!int.TryParse(Console.ReadLine(), out a) || a <= 0)
+        while (!int.TryParse(Console.ReadLine(), out temp)) 
         {
-            Console.WriteLine("Неверный ввод, введите целое число большее 0");
+            Console.WriteLine("Incorrect input, try again");
         }
-
-        return a;
+        return temp;
     }
-    
     
 do{
     
