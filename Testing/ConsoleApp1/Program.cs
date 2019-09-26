@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 class Program
 {
     public static int Input()
@@ -18,24 +19,25 @@ class Program
         return temp;
     }
 
-    delegate double Sum(int x, int i);
+    public static double DInput()
+    {
+        double temp;
 
+        while (!double.TryParse(Console.ReadLine(), out temp))
+        {
+            Console.WriteLine("Incorrect input, try again");
+        }
+        return temp;
+    }
     static void Main(string[] args)
     {
-        Sum ans = (x, i) => ((Math.Pow(x, 5)) * (Math.Pow(i, 5))) * 1.0 / 120;
-        double answer = 0;
-        for (int i0 = 1; i0 <= 5; ++i0)
+        do
         {
-            Console.WriteLine(ans(2, i0));
-        }
-        
-        Console.Read();
+
+
+
+
+
+        } while (Console.ReadKey(true).Key != ConsoleKey.Enter);
     }
-   
 }
-
-
-
-
-
-

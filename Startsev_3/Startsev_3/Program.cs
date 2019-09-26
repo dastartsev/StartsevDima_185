@@ -41,7 +41,7 @@ class Program
             Monomial[] arr = new Monomial[8];
             for (int i = 0; i < arr.Length; i++)// случайные числа
             {
-                a
+                
                 arr[i] = new Monomial();
                 arr[i].a = rnd.NextDouble() * 40 - 20;
                 arr[i].n = rnd.Next(1, 9);
